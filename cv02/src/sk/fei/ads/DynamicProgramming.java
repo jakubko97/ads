@@ -27,9 +27,7 @@ public class DynamicProgramming {
         }
         return lines;
     }
-
-
-
+    
     public static void findMinPen(){
         int kmPerDay = 400;
         double value = 0;
@@ -61,7 +59,7 @@ public class DynamicProgramming {
     }
 
     public static void parseFileIntoArray(){
-        List l = readFileInList("C:\\work\\xjancikj\\ads\\cv02\\ADS2021_cvicenie2data.txt");
+        List l = readFileInList("C:\\work\\xjancikj\\git\\cv02\\ADS2021_cvicenie2data.txt");
 
         Iterator<String> itr = l.iterator();
 
