@@ -37,12 +37,12 @@ public class Main {
                 // Here x is value of F(i+2, j),
                 // y is F(i+1, j-1) and z is
                 // F(i, j-2) in above recursive formula
-                x = ((i + 2) <= j) ? table[i + 2][j] : 0;
-                y = ((i + 1) <= (j - 1)) ? table[i + 1][j - 1] : 0;
-                z = (i <= (j - 2)) ? table[i][j - 2] : 0;
+                x = ((i + 2) <= j) ? table[i + 2][j] : 0; // ja beriem i super berie i+1
+                y = ((i + 1) <= (j - 1)) ? table[i + 1][j - 1] : 0; // ja beriem i , super berie j alebo beriem j a super berie i
+                z = (i <= (j - 2)) ? table[i][j - 2] : 0; // ja beriem j, super berie j-1
 
-                left = (i + 1 <= j) ? (arr[i + 1] > arr[j] ? x : y) : 0;
-                right = (i <= j - 1) ? (arr[i] > arr[j - 1] ? y : z) : 0;
+                left = (i + 1 <= j) ? (arr[i + 1] > arr[j] ? x : y) : 0; //rozhodnutie krupiera pre pripad ze zoberem i
+                right = (i <= j - 1) ? (arr[i] > arr[j - 1] ? y : z) : 0; //rozhodnutie krupiera pre pripad ze zoberem j
 
                 table[i][j] = Math.max(arr[i] + left, arr[j] + right);
             }
