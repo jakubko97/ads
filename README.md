@@ -1,1 +1,1 @@
-# ads
+# Zadanie č.3 (2-SAT solver)
